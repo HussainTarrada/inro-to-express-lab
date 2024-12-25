@@ -11,11 +11,12 @@ app.listen(3000, () => {
 
 
 
-app.get('/greetings/<username-parameter>', (req, res) => {
-    res.send(`<h1>Hello ${req.params.username}!</h1>`);
-  });
-  
-  app.get('/roll/', (req, res) => {
-    res.send(`<h1>Hello Hussain!</h1>`);
+  app.get('/greetings/:name', (req, res) => {
+
+    const name = req.params.name;
+
+    res.send(`Hello there, ${name}!`);
 });
+
+
   
